@@ -1,4 +1,6 @@
-public class PessoaFisica extends Pessoa{
+package adapter;
+
+public class PessoaFisica extends Pessoa {
     private double salario;
     private int dependentes;
     private double valorSaude;

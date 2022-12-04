@@ -1,4 +1,6 @@
-public class PessoaJuridica extends Pessoa{
+package adapter;
+
+public class PessoaJuridica extends Pessoa {
     private double rendimento;
 
     public PessoaJuridica(long id, String nome, double rendimento) {

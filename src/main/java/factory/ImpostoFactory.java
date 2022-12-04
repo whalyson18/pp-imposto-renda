@@ -1,3 +1,5 @@
+package factory;
+
 public class ImpostoFactory {
     private ImpostoFactory(){}
 

@@ -1,3 +1,5 @@
+package factory;
+
 public class CalcularImpostoDeRendaPessoaJuridica implements CalculoImpostoDeRenda{
     private Pessoa pessoa;
 
@@ -17,7 +19,7 @@ public class CalcularImpostoDeRendaPessoaJuridica implements CalculoImpostoDeRen
         double CSLL = pessoaJuridica.getRendimento() * 0.09;
         double ICMS = pessoaJuridica.getRendimento() * 0.05;
 
-        System.out.printf("Pessoa Juridica. O valor dos impostos ficou em: R$%s", (impostoValorExcedente + IR + CSLL + ICMS));
+        System.out.printf("factory.Pessoa Juridica. O valor dos impostos ficou em: R$%s", (impostoValorExcedente + IR + CSLL + ICMS));
 
     }
 }

@@ -1,12 +1,9 @@
-public class CalcularImpostoDeRendaPessoaFisica implements CalculoImpostoDeRenda{
-    private Pessoa pessoa;
+package adapter;
 
-    public CalcularImpostoDeRendaPessoaFisica(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
 
+public class PessoaFisicaAdapter implements ImpostoDeRenda {
     @Override
-    public void calcularImpostoDeRenda() {
+    public void calcularImpostoDeRenda(Pessoa pessoa) {
         PessoaFisica pessoaFisica = (PessoaFisica) pessoa;
 
         double alicotaIRPF = 0;
@@ -33,7 +30,6 @@ public class CalcularImpostoDeRendaPessoaFisica implements CalculoImpostoDeRenda
 
         double IR = ((pessoaFisica.getSalario() - (valorPorDependente * pessoaFisica.getDependentes()) - INSS) * alicotaIRPF) + (pessoaFisica.getValorSaude() + pessoaFisica.getValorEducacao());
 
-        System.out.printf("Pessoa Fisica: O valor dos impostos ficou em: R$%s", IR);
-
+        System.out.printf("factory.Pessoa Fisica: O valor dos impostos ficou em: R$%s", IR);
     }
 }
